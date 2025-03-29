@@ -98,7 +98,14 @@ Of the other techniques experimented with, transfer learning and weighted loss c
 
 ---
 ### Impact Narrative
+This project's findings extend beyond dermatology image classification and can be implemented for all AI/ML models with limited data and/or extreme imbalance. Many of teams of engineers and researchers building and deploying AI model are not reflective of the society in which they create these technologies for. Because of that, data is often more representative of common occurances. In the case of this project, skin conditions that are more commonly seen and lighter skin tones have more data available, leading to lower accuracy for the later.
 
+Improving model accuracy for those with rarer conditions or darker skin tone has ethical and societal impacts. As AI becomes more commonly used, the models need to be accurate and consistent to ensure patients with dark skin tones or less common conditions are not wrongly diagnosed and given incorrect or no treatment that could worsen their condition. Incorrect diagnoses can also lead patients to loss trust in medical institutions or professionals and open up room for legal, public relation, and/or financial risks. 
 
 --- 
 ### Next Steps & Future Improvements
+Initial experimentation has shown transfer learning and weighted loss entropy to significantly improve model performance, but further research, exploration, and implementation of data augmentation, ensemble models, and over/under sampling can be conducted further to improve model performance. This includes moderately augmenting moderately underrepresented conditions and skin tones using slight augmentation such as rotatation, zoom, flip, and fill while aggressively augmenting extremely underrepresented conditions and skin tones with more agrressive settings such as larger values for the same augmentations applied to moderate images and adding a brightness/channel shift range.
+
+Ensemble (multiple) models can also be implemented to enhance generalization, increase robustness, and improve accuracy further by using multiple models to make predictions. Over and under sampling can help to adjust the imbalance od data but taking a balance subset of the original dataset. This can be combined with data augmentation techniques to generate a larger overall dataset and under or over sample from it to ensure the already limited dataset does not get smaller.
+
+Lastly, other pre-trained models can be experimented as the above techniques are implemented to increase the amount of data available for training. This is because DenseNet, though performing well on the dataset as a base model, has ~20 million in total params which is suitable for limited data but may perform less well as the dataset increases.

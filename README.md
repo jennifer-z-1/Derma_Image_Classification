@@ -4,11 +4,11 @@
 - [Jennifer Zheng](https://github.com/jennifer-z-1)<br>
   - Contribution(s): Project Management, Data Exploration/Preprocessing, Model Experimentation/Optimization, Evaluation/Validation, Technique Exploration (Data Augmentation, Transfer Learning, Ensemble Model, Sampling), GitHub Write Up (Project Highlights, Setup & Execution, Data Exploration, Model Development, Results & Findings, Impact Narrative, Next Steps & Future Improvements)
 - [Johanna Johnsen](https://github.com/johannaj16)
-  - Contribution(s): GitHub Write Up (Project Overview, Data Exploration)
+  - Contribution(s): GitHub Write Up (Project Overview, Data Overview)
 - [Aliona Heitz](https://github.com/alionaheitz)<br>
-  - Contribution(s): GitHub Write Up (Project Overview, Data Exploration)
+  - Contribution(s): GitHub Write Up (Project Overview, Data Overview)
 - [Sukaina Zaidi](https://github.com/sukainazaidi)<br>
-  - Contribution(s): GitHub Write Up (Project Overview, Data Exploration)
+  - Contribution(s): GitHub Write Up (Project Overview, Data Overview)
 - Olzhas Yessenbayev
   - Contribution(s): Teaching Assistant (TA)
 

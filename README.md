@@ -56,7 +56,7 @@ Data Dictionary
 --- 
 ### Data Exploration
 The data is preprocessed in accordance with the requirements of each respective pre-trained model. Common preprocessing steps include:
-1. Image resizing, typically 128x128, 224x224, or 229x229 depending on model and data generator
+1. Image resizing, typically 224x224, 229x229, or 299x299 depending on model and data generator
 2. Normalization to scale pixel values and facilitate faster convergence during training
 3. Splitting train dataset into train (0.8) and validation (0.2) sets
 4. Preprocess using function specific to each model imported using keras.applications
@@ -72,10 +72,10 @@ Fitzpatrick  Distribution
 --- 
 ### Model Development
 Considering the limited dataset, pre-trained models with less parameters and layers were selected to prevent overfitting, improve training stability, and better generalization. This includes:
-- Inception
-- ResNet
+- InceptionV3
+- ResNet50
 - Xception
-- DenseNet
+- DenseNet201
 
 Hyperparameters (e.g. batch size, learning rate, num of layers frozen) were also experimented with to optimize the performance of the model. Other techniques experimented with includes data augmentation, transfer learning, ensemble models, weighted loss, and sampling to increase the size and diversity of the dataset, enhance generalization, mitigate overfitting, and balance class distribution.
 
@@ -84,10 +84,10 @@ Hyperparameters (e.g. batch size, learning rate, num of layers frozen) were also
 The model is expected to predict the skin condition based on the image for each md5hash and the results are evaluated using the F1 score which is the harmonic mean of the precision and recall. The formula for the base F1 score is: F1 = 2 * (precision * recall) / (precision + recall). 
 
 The best to worst performing base models were found to be:
-1. DenseNet (total params: ~20 million)
+1. DenseNet201 (total params: ~20 million)
 2. Xception (total params: ~23 million)
-3. ResNet (total params: ~25 million)
-4. Inception (total params: ~27 million)
+3. ResNet50 (total params: ~25 million)
+4. InceptionV3 (total params: ~27 million)
 
 The hyperparameter settings for best performance are:
 - Batch Size: 16

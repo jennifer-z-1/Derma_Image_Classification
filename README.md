@@ -71,13 +71,32 @@ Fitzpatrick  Distribution
 
 --- 
 ### Model Development
+Considering the limited dataset, pre-trained models with less parameters and layers were selected to prevent overfitting, improve training stability, and better generalization. This includes:
+- Inception
+- ResNet
+- Xception
+- DenseNet
 
+Hyperparameters (e.g. batch size, learning rate, num of layers frozen) were also experimented with to optimize the performance of the model. Other techniques experimented with includes data augmentation, transfer learning, ensemble models, weighted loss, and sampling to increase the size and diversity of the dataset, enhance generalization, mitigate overfitting, and balance class distribution.
 
 --- 
 ### Results & Key Findings
+The model is expected to predict the skin condition based on the image for each md5hash and the results are evaluated using the F1 score which is the harmonic mean of the precision and recall. The formula for the base F1 score is: F1 = 2 * (precision * recall) / (precision + recall). 
 
+The best to worst performing base models were found to be:
+1. DenseNet (total params: ~20 million)
+2. Xception (total params: ~23 million)
+3. ResNet (total params: ~25 million)
+4. Inception (total params: ~27 million)
 
---- 
+The hyperparameter settings for best performance are:
+- Batch Size: 16
+- Learning Rate: 0.001
+- Num of Layers Frozen: last 125
+
+Of the other techniques experimented with, transfer learning and weighted loss contributed to improvements in the model while data augmentation, ensemble models, and over/under sampling did not significantly impact performance.
+
+---
 ### Impact Narrative
 
 
